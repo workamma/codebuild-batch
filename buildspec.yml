@@ -2,7 +2,7 @@ version: 0.2
 
 batch:
   fast-fail: false
-  build-graph:
+  build-list:
     - identifier: build1
       env:
         type: LINUX_CONTAINER
