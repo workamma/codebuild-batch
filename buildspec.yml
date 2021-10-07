@@ -1,0 +1,15 @@
+version: 0.2
+
+batch:
+  fast-fail: false
+  build-graph:
+    - identifier: build1
+      env:
+        type: LINUX_CONTAINER
+        image: aws/codebuild/amazonlinux2-x86_64-standard:3.0
+        buildspec: prj1/prj1buildspec.yml
+    - identifier: build2
+      env:
+        type: WINDOWS_SERVER_2019_CONTAINER
+        image: aws/codebuild/windows-base:2019-1.0
+        buildspec: prj2/prj2buildspec.yml
